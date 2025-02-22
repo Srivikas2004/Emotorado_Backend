@@ -5,5 +5,5 @@ const GOOGLE_CLIENT_SECRET=process.env.GOOGLE_CLIENT_SECRET;
 exports.oauth2client=new google.auth.OAuth2(
     GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET,
-    'postmessage'
+    "https://emotorado-backend.onrender.com/auth/google"
 )
