@@ -1,7 +1,7 @@
     const userModel = require('../models/userModel');
     const {oauth2client} =require('../utils/googleConfig')
     const axios=require('axios');
-    const bcrypt = require('bcrypt');
+    const bcrypt = require('bcryptjs');
     const jwt=require('jsonwebtoken');
     const nodemailer = require("nodemailer");
 
