@@ -104,7 +104,7 @@
     
             const token = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: "10m" });
     
-            const resetLink = `https://emotorado-backend.onrender.com/auth/reset-password?token=${token}`;
+            const resetLink = `https://emotorado-frontend.onrender.com/reset-password?token=${token}`;
     
             await transporter.sendMail({
                 from: process.env.EMAIL_USER,
