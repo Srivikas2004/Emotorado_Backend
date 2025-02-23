@@ -13,7 +13,7 @@
             if (user) return res.status(400).json({ message: "User already exists" });
     
             const hashedPassword = await bcrypt.hash(password, 10);
-            user = await userModel.create({ name, email, password: hashedPassword,, isGoogleUser: false });
+            user = await userModel.create({ name, email, password: hashedPassword, isGoogleUser: false });
     
             res.status(201).json({ message: "Registration successful" });
         } catch (err) {
