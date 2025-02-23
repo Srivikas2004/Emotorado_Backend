@@ -154,10 +154,6 @@
     };
     
     module.exports={
-<<<<<<< HEAD
         googleLogin, normalLogin, setPassword,forgotPassword,resetPassword
     }
-=======
-        signupUser,googleLogin, normalLogin, setPassword,forgotPassword,resetPassword
-    }
->>>>>>> df8ebe7 (Added signup and login toggle functionality)
+
