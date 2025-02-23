@@ -1,4 +1,4 @@
-const { googleLogin ,normalLogin,setPassword,forgotPassword,resetPassword} = require('../controllers/authController');
+const { signupUser,googleLogin ,normalLogin,forgotPassword,resetPassword} = require('../controllers/authController');
 
 const router=require('express').Router();
 
@@ -10,4 +10,5 @@ router.get('/google',googleLogin);
 router.post("/login", normalLogin);
 router.post("/forgot-password", forgotPassword);
 router.post("/reset-password",resetPassword);
+router.post("/signup",signupUser);
 module.exports=router;

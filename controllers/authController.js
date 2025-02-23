@@ -4,6 +4,22 @@
     const bcrypt = require('bcryptjs');
     const jwt=require('jsonwebtoken');
     const nodemailer = require("nodemailer");
+    
+    const signupUser = async (req, res) => {
+        try {
+            const { name, email, password } = req.body;
+            
+            let user = await userModel.findOne({ email });
+            if (user) return res.status(400).json({ message: "User already exists" });
+    
+            const hashedPassword = await bcrypt.hash(password, 10);
+            user = await userModel.create({ name, email, password: hashedPassword });
+    
+            res.status(201).json({ message: "Registration successful" });
+        } catch (err) {
+            res.status(500).json({ message: "Server error" });
+        }
+    };
 
     const transporter = nodemailer.createTransport({
         service: "gmail",
@@ -138,5 +154,10 @@
     };
     
     module.exports={
+<<<<<<< HEAD
         googleLogin, normalLogin, setPassword,forgotPassword,resetPassword
     }
+=======
+        signupUser,googleLogin, normalLogin, setPassword,forgotPassword,resetPassword
+    }
+>>>>>>> df8ebe7 (Added signup and login toggle functionality)
