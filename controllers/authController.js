@@ -154,6 +154,6 @@
     };
     
     module.exports={
-        googleLogin, normalLogin, setPassword,forgotPassword,resetPassword
+        signUpuser,googleLogin, normalLogin, setPassword,forgotPassword,resetPassword
     }
 
